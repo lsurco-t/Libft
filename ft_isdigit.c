@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 10:47:55 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/15 15:56:30 by lsurco-t         ###   ########.fr       */
+/*   Created: 2025/04/15 19:05:02 by lsurco-t          #+#    #+#             */
+/*   Updated: 2025/04/15 19:05:02 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include <stdio.h>
 
-int	ft_isalpha(char c)
+int	ft_isdigit(char num)
 {
-	if ((c < 65 || c > 90) && (c < 97 || c > 122))
+	if (num < 48 || num > 57)
 	{
 		return (0);
 	}
 	return (1);
 }
-
 int	main(void)
 {
-	char	c;
+	char	num;
 
-	c = 'C';
-	printf("Original isalpha result = %i\n", isalpha(c));
-	printf("Function ft_isalpha result = %i", ft_isalpha(c));
+	num = '%';
+	printf("Original isdigit result = %i\n", isdigit(num));
+	printf("Function ft_isdigit result = %i", ft_isdigit(num));
 	return (0);
 }

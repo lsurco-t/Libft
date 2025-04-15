@@ -10,26 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<stdio.h>
-#include	<ctype.h>
+/*#include <ctype.h>
+#include <stdio.h>*/
 
-int	ft_isalpha(char str)
+int	ft_isalpha(char c)
 {
-	if (str == '\0')
+	if ((c < 65 || c > 90) && (c < 97 || c > 122))
 	{
-		return(0);
-	}
-	if ((str < 65 || str > 90) && (str < 97 || str > 122))
-	{		
 		return (0);
 	}
-	return (1024);
+	return (1);
 }
-int	main(void)
+
+/*int	main(void)
 {
-	char	str = 'A';
-	
-	printf("%i\n", isalpha(str));
-	printf("%i",ft_isalpha(str));
-	return(0);
+	char	c;
+
+	c = 'G';
+	printf("Original isalpha result = %i\n", isalpha(c));
+	printf("Function ft_isalpha result = %i", ft_isalpha(c));
+	return (0);
 }
+*/

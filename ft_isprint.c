@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 19:49:50 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/16 19:49:50 by lsurco-t         ###   ########.fr       */
+/*   Created: 2025/04/16 20:04:46 by lsurco-t          #+#    #+#             */
+/*   Updated: 2025/04/16 20:04:46 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include <stdio.h>
 
-int	ft_isascii(int asc)
+int	ft_isprint(int printc)
 {
-	if (asc >= 0 && asc <= 127)
+	if (printc >= 32 && printc <= 126)
 		return (1);
 	return (0);
 }
 
 int	main(void)
 {
-	int	asc;
+	int	printc;
 
-	asc = 127;
-	printf("Recreated function value is: %i\n", ft_isascii(asc));
-	printf("Original function value is: %i", isascii(asc));
+	printc = '\n';
+	printf("Recreated function value is %i\n", ft_isprint(printc));
+	printf("Original function value is: %i", isprint(printc));
 	return (0);
 }

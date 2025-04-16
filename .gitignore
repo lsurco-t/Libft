@@ -10,5 +10,6 @@ libft.a
 # Executables
 *.exe 
 
-# Folder with tests
+# Folders
 main/
+.vscode/

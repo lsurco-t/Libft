@@ -1,7 +1,7 @@
 # Executable binaries
 a.out
 
-# Static libray
+# Static library
 libft.a
 
 # Compiled object files

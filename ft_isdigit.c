@@ -13,7 +13,7 @@
 #include <ctype.h>
 #include <stdio.h>
 
-int	ft_isdigit(char num)
+int	ft_isdigit(int num)
 {
 	if (num < 48 || num > 57)
 	{
@@ -24,9 +24,9 @@ int	ft_isdigit(char num)
 
 int	main(void)
 {
-	char	num;
+	int	num;
 
-	num = 'u';
+	num = '9';
 	printf("Original isdigit result = %i\n", isdigit(num));
 	printf("Function ft_isdigit result = %i", ft_isdigit(num));
 	return (0);

@@ -13,7 +13,7 @@
 #include <ctype.h>
 #include <stdio.h>
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c < 65 || c > 90) && (c < 97 || c > 122))
 	{
@@ -24,9 +24,9 @@ int	ft_isalpha(char c)
 
 int	main(void)
 {
-	char	c;
+	int	c;
 
-	c = 'C';
+	c = 'A';
 	printf("Original isalpha result = %i\n", isalpha(c));
 	printf("Function ft_isalpha result = %i", ft_isalpha(c));
 	return (0);

@@ -7,8 +7,8 @@ libft.a
 # Compiled object files
 *.o
 
-#Executables
+# Executables
 *.exe 
 
-#Folder with tests
+# Folder with tests
 main/

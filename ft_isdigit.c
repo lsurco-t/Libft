@@ -21,11 +21,12 @@ int	ft_isdigit(char num)
 	}
 	return (1);
 }
+
 int	main(void)
 {
 	char	num;
 
-	num = '%';
+	num = 'u';
 	printf("Original isdigit result = %i\n", isdigit(num));
 	printf("Function ft_isdigit result = %i", ft_isdigit(num));
 	return (0);

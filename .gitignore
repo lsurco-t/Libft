@@ -1,0 +1,14 @@
+# Executable binaries
+a.out
+
+# Static libray
+libft.a
+
+# Compiled object files
+*.o
+
+#Executables
+*.exe 
+
+#Folder with tests
+main/

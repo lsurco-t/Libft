@@ -30,9 +30,11 @@ int	main(void)
 {
 	char	str1[30] = "firststring";
 	char	str2[30] = "firststring";
+	size_t	n;
 
-	memset(str1, 48, 10);
-	ft_memset(str2, 48, 10);
+	n = 5;
+	memset(str1, 48, n);
+	ft_memset(str2, 48, n);
 	printf("String after original function use: %s\n", str1);
 	printf("String after recreated function use: %s\n", str2);
 	return (0);

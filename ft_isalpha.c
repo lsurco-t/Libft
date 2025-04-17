@@ -26,7 +26,7 @@ int	main(void)
 {
 	int	c;
 
-	c = 'A';
+	c = 'a';
 	printf("Original isalpha result = %i\n", isalpha(c));
 	printf("Function ft_isalpha result = %i", ft_isalpha(c));
 	return (0);

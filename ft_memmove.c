@@ -6,19 +6,19 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:15:34 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/17 14:24:47 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/17 14:56:49 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while(i < n)
+	while (i < n)
 	{
 		((char *)dest)[i] = ((char *)src)[i];
 		i++;

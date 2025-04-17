@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 21:36:56 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/17 11:32:15 by lsurco-t         ###   ########.fr       */
+/*   Created: 2025/04/17 11:29:28 by lsurco-t          #+#    #+#             */
+/*   Updated: 2025/04/17 11:43:04 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <string.h>
+#include <stdio.h>
 
-void	*ft_memset(char *str, int c, size_t n)
+void	ft_bzero(char *str, size_t n)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
-	while (i < n)
+	while ( i < n)
 	{
-		str[i] = c;
+		str[i] = '\0';
 		i++;
 	}
-	return (str);
 }
 
 int	main(void)
 {
-	char	str1[30] = "firststring";
-	char	str2[30] = "secondstring";
+	char	str1[30] = "Stringtest";
+	char	str2[30] = "Stringtest";
 
-	memset(str1, 48, 3);
-	ft_memset(str2, 48, 3);
+	bzero(str1, 2);
+	ft_bzero(str2, 1);
 	printf("String after original function use: %s\n", str1);
 	printf("String after recreated function use: %s\n", str2);
 	return (0);

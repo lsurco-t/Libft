@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
 	size_t	i;
 
@@ -34,7 +34,7 @@ int	main(void)
 	char	str4[20] = "test";
 	size_t	n;
 
-	n = 0;
+	n = 3;
 	memcpy(str1, str2, n);
 	ft_memcpy(str3, str4, n);
 	printf("String result after using function: %s\n", str1);

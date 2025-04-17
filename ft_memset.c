@@ -13,14 +13,14 @@
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memset(char *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < n)
 	{
-		str[i] = c;
+		((unsigned char *)str)[i] = (unsigned char)c;
 		i++;
 	}
 	return (str);
@@ -29,10 +29,10 @@ void	*ft_memset(char *str, int c, size_t n)
 int	main(void)
 {
 	char	str1[30] = "firststring";
-	char	str2[30] = "secondstring";
+	char	str2[30] = "firststring";
 
-	memset(str1, 48, 3);
-	ft_memset(str2, 48, 0);
+	memset(str1, 48, 10);
+	ft_memset(str2, 48, 10);
 	printf("String after original function use: %s\n", str1);
 	printf("String after recreated function use: %s\n", str2);
 	return (0);

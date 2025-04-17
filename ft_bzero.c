@@ -13,26 +13,39 @@
 #include <stdio.h>
 #include <string.h>
 
-void	ft_bzero(char *str, size_t n)
+void	ft_bzero(void *str, size_t n)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < n)
 	{
-		str[i] = '\0';
+		((unsigned char *)str)[i] = '\0';
 		i++;
 	}
 }
 
 int	main(void)
 {
-	char	str1[30] = "Stringtest";
-	char	str2[30] = "Stringtest";
+	char	str1[20] = "Stringtest";
+	char	str2[20] = "Stringtest";
+	size_t	i;
+	size_t	n;
 
-	bzero(str1, 2);
-	ft_bzero(str2, 2);
-	printf("String after original function use: %s\n", str1);
-	printf("String after recreated function use: %s\n", str2);
+	n = 0;
+	bzero(str1, n);
+	ft_bzero(str2, n);
+	i = 0;
+	while (i < sizeof(str1))
+	{
+		printf("String after original function use: %c\n", str1[i]);
+		i++;
+	}
+	i = 0;
+	while (i < sizeof(str2))
+	{
+		printf("String after recreated function use: %c\n", str2[i]);
+		i++;
+	}
 	return (0);
 }

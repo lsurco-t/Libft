@@ -32,9 +32,11 @@ int	main(void)
 	char	str2[20] = "test";
 	char	str3[20] = "Stringfortest";
 	char	str4[20] = "test";
+	size_t	n;
 
-	memcpy(str1, str2, 4);
-	ft_memcpy(str3, str4, 4);
+	n = 0;
+	memcpy(str1, str2, n);
+	ft_memcpy(str3, str4, n);
 	printf("String result after using function: %s\n", str1);
 	printf("String result after recreated function used: %s\n", str3);
 	return (0);

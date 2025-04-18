@@ -18,6 +18,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	
 	while (i < n)
 	{
 		((char *)dest)[i] = ((char *)src)[i];
@@ -29,12 +30,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 int	main(void)
 {
 	char	str1[20] = "Stringfortest";
-	char	str2[20] = "test";
+//	char	str2[20] = "test";
 	char	str3[20] = "Stringfortest";
-	char	str4[20] = "test";
+//	char	str4[20] = "test";
 
-	memmove(str1, str2, 6);
-	ft_memmove(str3, str4, 6);
+	memmove(str1 + 2, str1, 4);
+	ft_memmove(str3 + 2, str3, 4);
 	printf("String result after using function: %s\n", str1);
 	printf("String result after recreated function used: %s\n", str3);
 	return (0);

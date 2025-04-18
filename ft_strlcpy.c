@@ -12,21 +12,18 @@
 
 #include <stdio.h>
 #include <string.h>
-size_t strlcpy(char *dst, const char *src, size_t dstsize);
 
+size_t	strlcpy(char *dst, const char *src, size_t dstsize);
 
 /*size_t	ft_strlcpy(char *dst, const char * src, size_t n)
-{
-
-
-}*/
-
-int	main(void)
 {
 	char	src[] = "Stringtocopy";
 	char	dst[20];
 	size_t	n;
 
+}*/
+int	main(void)
+{
 	n = strlcpy(dst, src, sizeof(dst));
 	printf("Result function is: %s\n", dst);
 	return (0);

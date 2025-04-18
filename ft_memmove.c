@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		return (dest);
 	}
-	if (dest < src )
+	if (dest < src)
 	{
 		i = 0;
 		while (i < n)
@@ -47,8 +47,6 @@ int	main(void)
 	char	str1[20] = "Stringfortest";
 	char	str3[20] = "Stringfortest";
 
-	//	char	str2[20] = "test";
-	//	char	str4[20] = "test";
 	memmove(str1, str1 + 2, 4);
 	ft_memmove(str3, str3 + 2, 4);
 	printf("String result after using function: %s\n", str1);

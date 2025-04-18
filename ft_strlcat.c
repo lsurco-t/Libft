@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/18 10:22:51 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/18 11:50:31 by lsurco-t         ###   ########.fr       */
+/*   Created: 2025/04/18 11:51:25 by lsurco-t          #+#    #+#             */
+/*   Updated: 2025/04/18 11:55:47 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <string.h>
+#include <stdio.h>
 
-size_t	ft_strlcpy(char *dst, const char * src, size_t n)
+/*size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {
 
 
-}
+}*/
 
 int	main(void)
 {
-	char	src[] = "Stringtocopy";
+	char	src[] = "test string";
 	char	dst[20];
-	size_t	n;
+	size_t n;
 
-	n = strlcpy(dst, src, sizeof(dst));
-	printf("Result function is: %s\n", dst);
-	return (0);
+	n = strlcat(dst, src, sizeof(dst));
+	printf("Function returned value: %s\n", dst);
+	return(0);
 }

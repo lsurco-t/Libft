@@ -6,14 +6,14 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 12:59:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/17 14:16:26 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/18 10:57:32 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 

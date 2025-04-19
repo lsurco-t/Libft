@@ -51,7 +51,7 @@ int	main(void)
 
 	ft_strlcpy(dst, src, sizeof(dst));
 	strlcpy(dst2, src, sizeof(dst2));
-	if (ft_strlen(dst) == ft_strlen(dst2))
+	if (strcmp(dst, dst2) == 0)
 		printf("Both functions copied: %s succesfully\n", dst);
 	else
 		printf("Different values\n");

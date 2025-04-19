@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
+#include <bsd/string.h>
 
 static size_t	ft_strlen(const char *str)
 {
@@ -44,10 +44,13 @@ size_t	ft_strlcpy(char *dst, const char * src, size_t n)
 }
 int	main(void)
 {
-	char	src[] = "Stringtocopy";
+	char	src[] = "Stringtocopystring";
 	char	dst[20];
+	char	dst2[20];
 	
 	ft_strlcpy(dst, src, sizeof(dst));
-	printf("Copied function is: %s, where %li characters were copied to destination\n", dst, strlen(dst));
+	strlcpy(dst2, src, sizeof(dst2));
+	printf("Copied function is: %s, where %li characters were copied to destination\n", dst, ft_strlen(dst));
+	printf("Original function copied is: %s, where %li characters were copied to destination\n", dst2, ft_strlen(dst2));
 	return (0);
 }

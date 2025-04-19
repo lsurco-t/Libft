@@ -24,8 +24,8 @@ int	main(void)
 {
 	int	asc;
 
-	asc = 127;
+	asc = 12;
 	printf("Recreated function value is: %i\n", ft_isascii(asc));
-	printf("Original function value is: %i", isascii(asc));
+	printf("Original function value is: %i\n", isascii(asc));
 	return (0);
 }

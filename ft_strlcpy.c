@@ -13,18 +13,41 @@
 #include <stdio.h>
 #include <string.h>
 
-size_t	strlcpy(char *dst, const char *src, size_t dstsize);
+static size_t	ft_strlen(const char *str)
+{
+	size_t	i;
 
-/*size_t	ft_strlcpy(char *dst, const char * src, size_t n)
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
+}
+
+size_t	ft_strlcpy(char *dst, const char * src, size_t n)
+{
+	size_t i;
+	size_t len;
+
+	len = ft_strlen(src);
+	i = 0;
+	if (n == 0)
+		return (len);
+	while (src[i] && i < n - 1)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (len);
+}
+int	main(void)
 {
 	char	src[] = "Stringtocopy";
 	char	dst[20];
-	size_t	n;
-
-}*/
-int	main(void)
-{
-	n = strlcpy(dst, src, sizeof(dst));
-	printf("Result function is: %s\n", dst);
+	
+	ft_strlcpy(dst, src, 8);
+	printf("Copied function is: %s, where %li characters were copied to destination\n", dst, strlen(dst));
 	return (0);
 }

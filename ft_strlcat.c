@@ -28,36 +28,31 @@ static size_t	ft_strlen(const char *str)
 size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {
 	size_t i;
-	size_t y;
-	size_t len;
-	
-	if (n <= (ft_strlen(dst)))
-		len = ft_strlen(src) + n;
-	else
-		len = ft_strlen(src) + ft_strlen(dst);
+	size_t dst_len;
+	size_t src_len;
+
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	i = 0;
-	y = 0;
-	while (dst[y])
+	if (n <= dst_len)
+		return n + src_len;
+	while (src[i] &&  dst_len + i < n - 1)
 	{
-		y++;
-	}
-	while (src[i] && i < (n - y - 1))
-	{
-		dst[y + i] = src[i];
+		dst[dst_len + i] = src[i];
 		i++;
 	}
-	dst[y + i] = '\0';
-	return(len);
+	dst[dst_len + i] = '\0';
+	return(src_len + dst_len);
 }
 
 int	main(void)
 {
 	char src[] = "test string";
-	char dst[20] = "This is a ";
-	char dst2[20] = "This is a ";
+	char dst[20] = "here goes a ";
+	char dst2[20] = "here goes a ";
 	
-	ft_strlcat(dst, src, sizeof(dst));
-	strlcat(dst2, src, sizeof(dst2));
+	ft_strlcat(dst, src, 10);
+	strlcat(dst2, src, 10);
 	if (strcmp(dst, dst2) == 0)
 		printf("Both functions copied: \"%s\" succesfully\n", dst2);
 	else

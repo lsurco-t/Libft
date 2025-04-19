@@ -10,47 +10,47 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <bsd/string.h>
+#include <stdio.h>
 
 static size_t	ft_strlen(const char *str)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		i++;
 	}
-	return(i);
+	return (i);
 }
 
 size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {
-	size_t i;
-	size_t dst_len;
-	size_t src_len;
+	size_t	i;
+	size_t	dst_len;
+	size_t	src_len;
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = 0;
 	if (n <= dst_len)
-		return n + src_len;
-	while (src[i] &&  dst_len + i < n - 1)
+		return (n + src_len);
+	while (src[i] && dst_len + i < n - 1)
 	{
 		dst[dst_len + i] = src[i];
 		i++;
 	}
 	dst[dst_len + i] = '\0';
-	return(src_len + dst_len);
+	return (src_len + dst_len);
 }
 
 int	main(void)
 {
-	char src[] = "test string";
-	char dst[20] = "here goes a ";
-	char dst2[20] = "here goes a ";
-	
+	char	src[] = "test string";
+	char	dst[20] = "here goes a ";
+	char	dst2[20] = "here goes a ";
+
 	ft_strlcat(dst, src, 10);
 	strlcat(dst2, src, 10);
 	if (strcmp(dst, dst2) == 0)

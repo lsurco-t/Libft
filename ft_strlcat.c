@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:51:25 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/19 23:07:52 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/19 23:10:37 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	main(void)
 	ft_strlcat(dst, src, 10);
 	strlcat(dst2, src, 10);
 	if (strcmp(dst, dst2) == 0)
-		printf("Both functions copied: \"%s\" succesfully\n", dst2);
+		printf("Both functions copied: \"%s\" successfully\n", dst2);
 	else
 	{
 		printf("Different values!\n");

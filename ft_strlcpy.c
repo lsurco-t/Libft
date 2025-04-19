@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <bsd/string.h>
+#include <stdio.h>
 
 static size_t	ft_strlen(const char *str)
 {
@@ -25,10 +25,10 @@ static size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-size_t	ft_strlcpy(char *dst, const char * src, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {
-	size_t i;
-	size_t len;
+	size_t	i;
+	size_t	len;
 
 	len = ft_strlen(src);
 	i = 0;
@@ -42,16 +42,18 @@ size_t	ft_strlcpy(char *dst, const char * src, size_t n)
 	dst[i] = '\0';
 	return (len);
 }
+
 int	main(void)
 {
 	char	src[] = "Stringtocopystring";
 	char	dst[20];
 	char	dst2[20];
-	
+
 	ft_strlcpy(dst, src, sizeof(dst));
 	strlcpy(dst2, src, sizeof(dst2));
-	printf("Copied function is: %s, where %li characters were copied to destination\n", dst, ft_strlen(dst));
-	printf("Original function copied is: %s, where %li characters were copied to destination\n", dst2, ft_strlen(dst2));
+	printf("Copied function is: %s, where
+		%li characters were copied to destination\n", dst, ft_strlen(dst));
+	printf("Original function copied is: %s, where
+		%li characters were copied to destination\n", dst2, ft_strlen(dst2));
 	return (0);
 }
-

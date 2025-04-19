@@ -1,5 +1,6 @@
 # Executable binaries
 a.out
+.zshrc
 
 # Static library
 libft.a

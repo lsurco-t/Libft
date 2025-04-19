@@ -54,3 +54,4 @@ int	main(void)
 	printf("Original function copied is: %s, where %li characters were copied to destination\n", dst2, ft_strlen(dst2));
 	return (0);
 }
+

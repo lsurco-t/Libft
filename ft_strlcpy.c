@@ -47,7 +47,7 @@ int	main(void)
 	char	src[] = "Stringtocopy";
 	char	dst[20];
 	
-	ft_strlcpy(dst, src, 8);
+	ft_strlcpy(dst, src, sizeof(dst));
 	printf("Copied function is: %s, where %li characters were copied to destination\n", dst, strlen(dst));
 	return (0);
 }

@@ -20,7 +20,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char *)s)[i] = (unsigned char)c;
+		((char *)s)[i] = (char)c;
 		i++;
 	}
 	return (s);
@@ -32,9 +32,9 @@ int	main(void)
 	char	str2[30] = "firststring";
 	size_t	n;
 
-	n = 5;
-	memset(str1, 48, n);
-	ft_memset(str2, 48, n);
+	n = 3;
+	memset(str1, 300, n);
+	ft_memset(str2, 300, n);
 	printf("String after original function use: %s\n", str1);
 	printf("String after recreated function use: %s\n", str2);
 	return (0);

@@ -6,16 +6,16 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 19:05:02 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/15 19:05:02 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/20 09:57:57 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include <stdio.h>
 
-int	ft_isdigit(int num)
+int	ft_isdigit(int c)
 {
-	if (num < 48 || num > 57)
+	if (c < 48 || c > 57)
 	{
 		return (0);
 	}

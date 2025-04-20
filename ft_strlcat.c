@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:51:25 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/19 23:10:37 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/20 10:07:43 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	dst_len;
@@ -34,9 +34,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = 0;
-	if (n <= dst_len)
-		return (n + src_len);
-	while (src[i] && dst_len + i < n - 1)
+	if (size <= dst_len)
+		return (size + src_len);
+	while (src[i] && dst_len + i < size - 1)
 	{
 		dst[dst_len + i] = src[i];
 		i++;

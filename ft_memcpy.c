@@ -34,7 +34,7 @@ int	main(void)
 	char	str4[20] = "test";
 	size_t	n;
 
-	n = 3;
+	n = 4;
 	memcpy(str1, str2, n);
 	ft_memcpy(str3, str4, n);
 	printf("String result after using function: %s\n", str1);

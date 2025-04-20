@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 10:22:51 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/18 11:50:31 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/20 10:06:44 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ static size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	len;
 
 	len = ft_strlen(src);
 	i = 0;
-	if (n == 0)
+	if (size == 0)
 		return (len);
-	while (src[i] && i < n - 1)
+	while (src[i] && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;

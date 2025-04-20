@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 10:22:51 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/20 10:06:44 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/20 15:24:28 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	main(void)
 	ft_strlcpy(dst, src, sizeof(dst));
 	strlcpy(dst2, src, sizeof(dst2));
 	if (strcmp(dst, dst2) == 0)
-		printf("Both functions copied: %s succesfully\n", dst);
+		printf("Both functions copied: %s successfully\n", dst);
 	else
 		printf("Different values\n");
 	return (0);

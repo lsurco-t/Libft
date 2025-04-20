@@ -1,45 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/20 10:24:54 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/20 11:22:21 by lsurco-t         ###   ########.fr       */
+/*   Created: 2025/04/20 11:15:58 by lsurco-t          #+#    #+#             */
+/*   Updated: 2025/04/20 11:23:47 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include <string.h>
 #include <stdio.h>
 
-int	ft_tolower(int c)
+char *ft_strchr(const char *s, int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	else
-		return (c);
-}
-
-int	main(void)
-{
-	int	c;
-
-	c = 'A';
-	while (c <= 'Z')
-	{
-		if (tolower(c) == ft_tolower(c))
-		{
-			printf("Expected result: %c\n", tolower(c));
-			printf("Function result: %c\n", ft_tolower(c));
-			printf("Same results!\n\n");
-		}
-		else
-		{
-			printf("Different results!\n");
-			return (0);
-		}
-		c++;
-	}
-	return (0);
+	
 }

@@ -6,14 +6,47 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 11:15:58 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/20 11:23:47 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/20 14:08:58 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			return ((char *)(s + i));
+		i++;
+	}
+	if (s[i] == c)
+		return ((char *)(s + i));
+	return (NULL);
+}
+
+int	main(void)
+{
+	char	str[20] = "findhereachar";
+	char	c;
+
+	c = '\0';
+	if (strchr(str, c) == ft_strchr(str, c))
+	{
+		printf("Same results!\n");
+		printf("Expected: %s\n", strchr(str, c));
+		printf("Delivered: %s\n", ft_strchr(str, c));
+	}
+	else
+	{
+		printf("Different results!\n");
+		printf("Expected: %s\n", strchr(str, c));
+		printf("Delivered: %s\n", ft_strchr(str, c));
+		return (0);
+	}
+	return (0);
 }

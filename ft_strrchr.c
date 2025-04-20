@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 11:16:27 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/20 15:58:19 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/20 16:11:44 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ char	*ft_strrchr(const char *s, int c)
 
 int	main(void)
 {
-	char str[20] = "finhdhereachar";
-	char c;
+	char	str[20] = "finhdhereachar";
+	char	c;
 
 	c = 'c';
 	if (strrchr(str, c) == ft_strrchr(str, c))

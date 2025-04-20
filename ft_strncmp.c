@@ -6,7 +6,15 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 16:55:20 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/20 16:55:38 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/20 16:58:12 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+#include <stdio.h>
+
+int ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+
+
+}

@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 16:55:20 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/21 10:14:31 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/21 11:47:01 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(void)
 	size_t	n;
 
 	n = 0;
-	while (n < 10)
+	while (n < 20)
 	{
 		if (strncmp(str1, str2, n) == ft_strncmp(str1, str2, n))
 		{

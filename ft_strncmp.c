@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 16:55:20 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/20 21:07:23 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/21 10:14:31 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	main(void)
 			printf("Different Results!\n");
 			printf("Expected: %i\n", strncmp(str1, str2, n));
 			printf("Function result: %i\n", ft_strncmp(str1, str2, n));
-			return(0);
+			return (0);
 		}
 		n++;
 	}

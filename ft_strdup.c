@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/21 19:53:43 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/21 22:41:02 by lsurco-t         ###   ########.fr       */
+/*   Created: 2025/04/21 22:39:34 by lsurco-t          #+#    #+#             */
+/*   Updated: 2025/04/21 22:40:39 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include <stdio.h>
-#include <stdlib.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strdup(const char *s)
 {
-	if(nmemb == 0)
-		return(void ptr());
+
+
 }
 
-int	main(void)
-{
-	
-}

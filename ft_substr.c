@@ -16,28 +16,28 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*substr;
+	char	*substr;
 	size_t	i;
-	size_t cpylen;
-	
+	size_t	cpylen;
+
 	i = 0;
 	if (s == NULL)
-		return(NULL);
+		return (NULL);
 	cpylen = ft_strlen(s);
 	if (start >= cpylen || len == 0)
-		return(malloc(1));
+		return (malloc(1));
 	if (start + len > cpylen)
-		len = cpylen - start;	
+		len = cpylen - start;
 	substr = malloc((len + 1) * sizeof(char));
 	if (substr == NULL)
 		return (NULL);
-	while( i < len)
+	while (i < len)
 	{
 		substr[i] = s[i + start];
 		i++;
 	}
 	substr[i] = '\0';
-	return(substr);
+	return (substr);
 }
 
 int	main(void)
@@ -50,7 +50,7 @@ int	main(void)
 	str = "stringtocopy";
 	start = 0;
 	len = 5;
-	while( start < 20 && len > 0)
+	while (start < 20 && len > 0)
 	{
 		substr = ft_substr(str, start, len);
 		printf("Substring value is: %s\n", substr);

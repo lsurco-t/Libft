@@ -26,7 +26,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str1[20] = "Stringfortest";
 	char	str2[20] = "test";
@@ -40,4 +40,4 @@ int	main(void)
 	printf("String result after using function: %s\n", str1);
 	printf("String result after recreated function used: %s\n", str3);
 	return (0);
-}
+}*/

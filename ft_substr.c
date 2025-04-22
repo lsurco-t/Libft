@@ -6,27 +6,57 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:27:18 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/22 12:58:41 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/22 19:55:39 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 #include <string.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-
-
+	char			*substr;
+	size_t	i;
+	size_t cpylen;
+	
+	i = 0;
+	if (s == NULL)
+		return(NULL);
+	cpylen = ft_strlen(s);
+	if (start >= cpylen || len == 0)
+		return(malloc(1));
+	if (start + len > cpylen)
+		len = cpylen - start;	
+	substr = malloc((len + 1) * sizeof(char));
+	if (substr == NULL)
+		return (NULL);
+	while( i < len)
+	{
+		substr[i] = s[i + start];
+		i++;
+	}
+	substr[i] = '\0';
+	return(substr);
 }
 
 int	main(void)
-[
-	char	*str1;
-	char 	*str2;
-	size_t	len;
+{
+	char			*str;
+	char			*substr;
+	size_t			len;
+	unsigned int	start;
 
-	str1 = "stringtocopy";
-
-
+	str = "stringtocopy";
+	start = 0;
+	len = 5;
+	while( start < 20 && len > 0)
+	{
+		substr = ft_substr(str, start, len);
+		printf("Substring value is: %s\n", substr);
+		free(substr);
+		start++;
+		len--;
+	}
 	return (0);
-]
+}

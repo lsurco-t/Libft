@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 22:39:34 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/22 12:14:41 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:16:25 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(void)
 	char	*str2;
 	char	*str3;
 
-	str1 = "22     2";
+	str1 = "";
 	str2 = strdup(str1);
 	str3 = ft_strdup(str1);
 	if (strcmp(str2, str3) == 0)

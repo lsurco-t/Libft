@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 19:53:43 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/22 12:51:19 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/22 15:43:52 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	str = malloc(nmemb * size);
 	if (str == NULL)
 		return (NULL);
-	while (i < nmemb)
+	while (i < nmemb * size)
 	{
-		((int *)str)[i] = '\0';
+		((char *)str)[i] = 0;
 		i++;
 	}
 	return (str);
@@ -37,23 +37,30 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 int	main(void)
 {
-	int		*str1;
-	int		*str2;
+	char	*str1;
+	char	*str2;
 	size_t	nmemb;
 	size_t	size;
+	size_t	i;
 
-	nmemb = 0;
-	size = sizeof(int);
+	nmemb = 5;
+	size = sizeof(char);
 	str1 = calloc(nmemb, size);
 	str2 = ft_calloc(nmemb, size);
-	if (str1[0] == str2[0])
+	i = 0;
+	while (str1[i] || str2[i])
 	{
-		printf("Same results!\n");
-		printf("Expected value: %i\n", *str1);
-		printf("Function value: %i\n", *str2);
+		if (str1[i] != str2[i])
+		{
+			printf("Different results!\n");
+			printf("Expected value: %i\n", str1[i]);
+			printf("Function value: %i\n", str2[i]);
+			return (1);
+		}
+		i++;
 	}
-	else
-		printf("Different results!");
+	printf("Same results!\n");
 	free(str1);
 	free(str2);
+	return (0);
 }

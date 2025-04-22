@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 22:39:34 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/22 12:16:25 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/22 15:50:44 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	while (s[len])
 		len++;
-	str = (char *)malloc(len * sizeof(char));
+	str = (char *)malloc((len + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	while (s[i])
@@ -32,6 +32,7 @@ char	*ft_strdup(const char *s)
 		str[i] = s[i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
 
@@ -41,7 +42,7 @@ int	main(void)
 	char	*str2;
 	char	*str3;
 
-	str1 = "";
+	str1 = "Hello, world!";
 	str2 = strdup(str1);
 	str3 = ft_strdup(str1);
 	if (strcmp(str2, str3) == 0)

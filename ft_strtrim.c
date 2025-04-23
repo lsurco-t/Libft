@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 20:52:16 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/23 10:04:18 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/23 10:49:25 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	char	*strim;
 
+	if (set == NULL)
+		return (s1);
+	else if (s1 == NULL)
+		return (NULL);
 	i = 0;
 	while (s1[i])
 	{

@@ -6,13 +6,13 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:19:59 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/23 19:13:54 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/23 22:05:23 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_strnlen(int n)
+static int	ft_strnlen(long int n)
 {
 	int	len;
 
@@ -63,8 +63,8 @@ int	main(void)
 	int		n;
 	char	*strn;
 
-	n = -568;
-	while (n <= -566)
+	n = 214743613;
+	while (n <= 214743646)
 	{
 		strn = ft_itoa(n);
 		if (strn == NULL)

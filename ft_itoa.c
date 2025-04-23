@@ -6,36 +6,36 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:19:59 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/23 18:25:24 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/23 19:13:54 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_strnlen(int n)
+static int	ft_strnlen(int n)
 {
-	int len;
+	int	len;
 
 	if (n == 0)
 		return (1);
 	if (n < 0)
 		len = 1;
 	else
-		len = 0;	
+		len = 0;
 	while (n != 0)
 	{
 		n = n / 10;
 		len++;
 	}
-	return(len);
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	size_t	len;
-	long int nb;
-		
+	char		*str;
+	size_t		len;
+	long int	nb;
+
 	nb = n;
 	len = ft_strnlen(nb);
 	str = malloc((len + 1) * sizeof(char));

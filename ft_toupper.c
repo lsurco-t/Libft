@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 10:23:00 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/20 11:22:30 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/23 23:05:43 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_toupper(int c)
 		return (c);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	c;
 
@@ -44,4 +44,4 @@ int	main(void)
 		c++;
 	}
 	return (0);
-}
+}*/

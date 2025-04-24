@@ -6,13 +6,14 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 10:26:44 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/24 10:27:21 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/24 11:20:45 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void			ft_putstr_fd(char *s, int fd)
 {
-
 
 }
 

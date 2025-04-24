@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 22:39:34 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/22 15:50:44 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/24 23:23:10 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strdup(const char *s)
 
 	len = 0;
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	while (s[len])
 		len++;
 	str = (char *)malloc((len + 1) * sizeof(char));

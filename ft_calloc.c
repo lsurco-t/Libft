@@ -6,32 +6,29 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 19:53:43 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/24 14:25:42 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/24 21:08:39 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*str;
-	size_t	i;
+	size_t	memsize;
 
-	i = 0;
 	if (nmemb == 0 || size == 0)
 	{
 		str = malloc(0);
 		return (str);
 	}
-	str = malloc(nmemb * size);
+	memsize = nmemb * size,
+	str = malloc(memsize);
 	if (str == NULL)
 		return (NULL);
-	while (i < nmemb * size)
-	{
-		((char *)str)[i] = 0;
-		i++;
-	}
+	ft_memset(str, 0, memsize);
 	return (str);
 }
 

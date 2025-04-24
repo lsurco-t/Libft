@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:27:18 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/22 19:55:39 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/24 23:25:11 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	cpylen = ft_strlen(s);
 	if (start >= cpylen || len == 0)
-		return (malloc(1));
+		return (ft_strdup(""));
 	if (start + len > cpylen)
 		len = cpylen - start;
 	substr = malloc((len + 1) * sizeof(char));

@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 19:53:43 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/24 21:12:58 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/24 22:33:37 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		str = malloc(0);
 		return (str);
 	}
-	memsize = nmemb * size,
+	if (nmemb > SIZE_MAX / size)
+		return (NULL);
+	memsize = nmemb * size;
 	str = malloc(memsize);
 	if (str == NULL)
 		return (NULL);

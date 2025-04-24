@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 22:32:23 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/23 23:29:19 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/24 23:21:19 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
-	char			*str;
-	size_t			len;
+	size_t		i;
+	char		*str;
+	size_t		len;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	len = ft_strlen(s);
 	str = malloc((len + 1) * sizeof(char));
@@ -30,6 +30,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		str[i] = f(i, s[i]);
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
 

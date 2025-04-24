@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 19:53:43 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/22 17:31:09 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:25:42 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	main(void)
 	size_t	i;
 
 	nmemb = 5;
-	size = sizeof(char);
+	size = sizeof(int);
 	str1 = calloc(nmemb, size);
 	str2 = ft_calloc(nmemb, size);
 	i = 0;

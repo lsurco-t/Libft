@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 10:26:44 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/24 12:03:38 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/24 12:12:41 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
-	int		nb;
+	int		dn;
 
 	i = 0;
-	nb = fd;
+	dn = fd;
 	while (s[i])
 	{
-		ft_putchar_fd(s[i], nb);
+		write(dn, &s[i], 1);
 		i++;
 	}
 }
@@ -29,10 +29,10 @@ void	ft_putstr_fd(char *s, int fd)
 int	main(void)
 {
 	char	*s;
-	int		n;
+	int		fd;
 
-	n = 1;
+	fd = 1;
 	s = "there is a string here";
-	ft_putstr_fd(s, n);
+	ft_putstr_fd(s, fd);
 	return (0);
 }

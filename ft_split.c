@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/25 14:28:16 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/25 14:37:11 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static	char *ft_newstr(char c)
 	return(str);
 }
 
-static int ft_newstrlen(char *s, char c)
+static int ft_newstrlen(const char *s, char c)
 {
 	size_t	len;
 	size_t	tlen;
@@ -60,13 +60,15 @@ char    **ft_split(char const *s, char c)
 		return(NULL);
 	i = 0;
     while (i < tlen)
-    {
-        strout[i] = s[i];
+    {	
+		str = ft_newstrlen(s[i], c);
+        strout[i] = str;
         if (i < tlen)
         {
             i++;
             strout[i] = c;
         }
+		free(str);
     }
     strout[i] = '\0';
     return (strout);

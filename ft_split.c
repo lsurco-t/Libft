@@ -6,72 +6,88 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/25 15:04:04 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/25 20:37:35 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
-static	char *ft_newstr(char c)
+static	char *newstr(char *s, char c)
 {
 	size_t   i;
 	size_t	len;
-	size_t	totallen;
 	char	*str;
 	
+	len = 0;
 	i = 0;
-	len = sizeof(c);
+	while (s[len] && s[len] != c)
+		len++;
 	str = malloc ((len + 1) * sizeof(char));
     if (str == NULL)
         return(NULL);
-	totallen = ft_strlen(str);
-	while (i < totallen)
+	while (i < len)
 	{
-		str[i] = c;
+		str[i] = s[i];
 		i++;
 	}
-	str[i] = '/0';
+	str[i] = '\0';
 	return(str);
 }
 
-static int ft_newstrlen(const char *s, char c)
+static size_t cwords(const char *s, char c)
 {
-	size_t	len;
-	size_t	tlen;
-	size_t	clen;
-
-	len = ft_strlen(s);
-	clen = len - 1;
-	tlen = len + clen;
-	return(tlen);
+	size_t	i;
+	int	counter;
+	
+	counter = 0;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			counter = counter + 1;
+		i++;
+	}
+	return(counter);
 }
 
+static	void cleanstr(char **str, size_t i)
+{
+	while (i > 0)
+	{
+		free(str[i]);
+		i--;
+	}
+	free (str);
+}
 char    **ft_split(char const *s, char c)
 {
     char    **strout;
-    size_t   tlen;
-    char    *str;
-	size_t	i;
+    size_t	i;
 
-	tlen = ft_newstrlen(s, c);
-	strout = malloc((tlen + 1) * sizeof(char));
+	if (s == NULL)
+		return (NULL);
+	strout = malloc((cwords(s, c) + 1) * sizeof(char *));
 	if (strout == NULL)
 		return(NULL);
 	i = 0;
-    while (i < tlen)
+    while (s[i])
     {	
-		str = ft_newstrlen(s[i], c);
-        strout[i] = str;
-        if (i < tlen)
-        {
-            i++;
-            strout[i] = c;
-        }
-		free(str);
+		while (s[i] == c)
+			i++;
+		if (s[i] == '\0')
+		{
+			strout[i] = newstr(s, c);
+		}
+		if (strout[i] == NULL)
+		{
+			cleanstr(strout, i);
+			return NULL;
+		}
+		i++;
+		while (s[i] && s[i] != c)
+			i++;
     }
-    strout[i] = '\0';
+    strout[i] = NULL;
     return (strout);
 }
 
@@ -81,22 +97,16 @@ int    main(void)
     char    c;
     char    **str_output;
 	int	i;
-	int	j;
-
-    str = "splitthisstring";
-    c = '_';
+	
+	str = "split,this,string";
+    c = ',';
     str_output = ft_split(str,c);
 	i = 0;
-	while (!str_output)
+   	while(str_output[i])
 	{
-		j = 0;
-    	while(str_output[i][j] != '/0')
-		{
-			printf("Function result after split: %c", str_output[i][j]);
-			j++;
-		}
+		printf("Function result after split: %s\n", str_output[i]);
+		free(str_output);
 		i++;
 	}
-	free(str_output);
-    return (0);    
+	return (0);    
 }

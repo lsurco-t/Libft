@@ -6,12 +6,13 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/25 14:37:11 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/25 15:04:04 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
 static	char *ft_newstr(char c)
 {
@@ -80,19 +81,22 @@ int    main(void)
     char    c;
     char    **str_output;
 	int	i;
+	int	j;
 
     str = "splitthisstring";
     c = '_';
     str_output = ft_split(str,c);
+	i = 0;
 	while (!str_output)
 	{
-		i = 0;
-    	while(!str_output[i])
+		j = 0;
+    	while(str_output[i][j] != '/0')
 		{
-			printf("Function result after split: %s", *str_output);
-			i++;
+			printf("Function result after split: %c", str_output[i][j]);
+			j++;
 		}
-    }
+		i++;
+	}
 	free(str_output);
     return (0);    
 }

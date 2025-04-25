@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:27:18 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/24 23:25:11 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/25 10:55:09 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,10 @@ int	main(void)
 	while (start < 20 && len > 0)
 	{
 		substr = ft_substr(str, start, len);
-		printf("Substring value is: %s\n", substr);
+		printf("Starting point: %i\n", start);
+		printf("length of copy: %zu\n", len);
+		printf("Original string: %s\n", str);
+		printf("Substring is: %s\n\n", substr);
 		free(substr);
 		start++;
 		len--;

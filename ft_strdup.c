@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 22:39:34 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/24 23:23:10 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/25 10:50:58 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strdup(const char *s)
 	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	*str1;
 	char	*str2;
@@ -62,4 +62,4 @@ int	main(void)
 	free(str2);
 	free(str3);
 	return (0);
-}
+}*/

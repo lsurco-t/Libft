@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/25 12:19:25 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/25 13:18:53 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,39 @@
 
 char	**ft_split(char const *s, char c)
 {
-	char	*strout;
+	char	**strout;
 	size_t	i;
 	size_t	len;
 	size_t	totallen;
+	size_t x;
+	char	*str;
 
-	len = ft_strlen(s);
+	len = (ft_strlen(s) / sizeof(char)) + 1;
 	i = 0;
+	totallen	= 0;
 	while (s[i])
-	{
-		len++;
+	{	
+		 str = malloc ((totallen + 1) * sizeof(char));
+			if (strout == NULL)
+			return(NULL);
+		totallen++;
 		i++;
+		free(str);
 	}
-	totallen = len;
-	strout = malloc ((totallen + 1) * sizeof(char));
-	if (strout == NULL)
-		return(NULL);
+	strout = malloc((totallen + 1) * sizeof(char));
 	i = 0;
-	while (s[i])
+	x = 0;
+	while (i < totallen)
 	{
-		strout[i] = s[i];
+		strout[i][x] = s[i];
 		if (i < totallen)
 		{
 			i++;
 			strout[i] = c;
 		}
 	}
-	strout[i] = '\0';
-	return (*strout);
+	strout[i][x] = '\0';
+	return (strout);
 }
 
 int	main(void)

@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 21:09:04 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/21 11:25:20 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/25 08:16:14 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,17 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
-	char	ch;
+	unsigned char	ch;
+	const	unsigned char *str;
 
 	i = 0;
 	ch = (unsigned char)c;
+	str = (const unsigned char *)s;
 	while (i < n)
 	{
-		if (((const char *)s)[i] == ch)
+		if (str[i] == ch)
 		{
-			return ((void *)(s + i));
+			return ((void *)(str + i));
 		}
 		i++;
 	}

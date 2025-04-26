@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/25 21:19:47 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:00:36 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,13 +87,13 @@ char    **ft_split(char const *s, char c)
 		if (s[i] != '\0')
 		{
 			strout[x] = newstr(&s[i], c);
-		}
-		if (strout[x] == NULL)
-		{
+			if (strout[x] == NULL)
+			{
 			cleanstr(strout, x);
 			return NULL;
+			}
+			x++;
 		}
-		x++;
 		while (s[i] && s[i] != c)
 			i++;
     }
@@ -108,8 +108,8 @@ int    main(void)
     char    **str_output;
 	int	i;
 	
-	str = "splitxthisxstring";
-    c = 'x';
+	str = "  tripouille  42  ";
+    c = ' ';
     str_output = ft_split(str,c);
 	i = 0;
 	printf("String to split: %s\n\n", str);

@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/26 18:58:44 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/26 20:43:50 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,17 +67,11 @@ static void	cleanstr(char **str, size_t i)
 	free(str);
 }
 
-char	**ft_split(char const *s, char c)
+static int	fillstr(char **strout, const char *s, char c)
 {
-	char	**strout;
 	size_t	i;
 	size_t	x;
 
-	if (s == NULL)
-		return (NULL);
-	strout = malloc((cwords(s, c) + 1) * sizeof(char *));
-	if (strout == NULL)
-		return (NULL);
 	x = 0;
 	i = 0;
 	while (s[i])
@@ -90,7 +84,7 @@ char	**ft_split(char const *s, char c)
 			if (strout[x] == NULL)
 			{
 				cleanstr(strout, x);
-				return (NULL);
+				return (0);
 			}
 			x++;
 		}
@@ -98,6 +92,20 @@ char	**ft_split(char const *s, char c)
 			i++;
 	}
 	strout[x] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**strout;
+
+	if (s == NULL)
+		return (NULL);
+	strout = malloc((cwords(s, c) + 1) * sizeof(char *));
+	if (strout == NULL)
+		return (NULL);
+	if (!fillstr(strout, s, c))
+		return (NULL);
 	return (strout);
 }
 

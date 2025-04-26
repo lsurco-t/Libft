@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/26 10:00:36 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:18:23 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ static size_t cwords(const char *s, char c)
 	{
 		if (s[i] == c)
 			i++;
-		if (s[i])
+		if (s[i] != c)
 		{
-			counter = counter + 1;
+			counter++;
 			while (s[i] && s[i] != c)
 				i++;
 		}
@@ -75,7 +75,7 @@ char    **ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	strout = malloc((cwords(s, c) + 1) * sizeof(char *));
+	strout = malloc((cwords(s, c)) * sizeof(char *));
 	if (strout == NULL)
 		return(NULL);
 	x = 0;

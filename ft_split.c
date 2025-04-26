@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/26 20:43:50 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/26 22:01:21 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,26 +107,4 @@ char	**ft_split(char const *s, char c)
 	if (!fillstr(strout, s, c))
 		return (NULL);
 	return (strout);
-}
-
-int	main(void)
-{
-	char	*str;
-	char	c;
-	char	**str_output;
-	int		i;
-
-	str = "--1--2----3---4--";
-	c = '-';
-	str_output = ft_split(str, c);
-	i = 0;
-	printf("String to split: %s\n\n", str);
-	while (str_output[i])
-	{
-		printf("Function result after split: %s\n", str_output[i]);
-		free(str_output[i]);
-		i++;
-	}
-	free(str_output);
-	return (0);
 }

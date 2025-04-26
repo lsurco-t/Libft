@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/26 10:18:23 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:25:03 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char    **ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	strout = malloc((cwords(s, c)) * sizeof(char *));
+	strout = malloc((cwords(s, c) + 1) * sizeof(char *));
 	if (strout == NULL)
 		return(NULL);
 	x = 0;
@@ -108,7 +108,7 @@ int    main(void)
     char    **str_output;
 	int	i;
 	
-	str = "  tripouille  42  ";
+	str = "  tripouille42";
     c = ' ';
     str_output = ft_split(str,c);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/26 10:26:12 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:48:12 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ static size_t cwords(const char *s, char c)
 	{
 		if (s[i] == c)
 			i++;
+		if (s[i] == '\0')
+			return (counter);
 		if (s[i] != c)
 		{
 			counter++;

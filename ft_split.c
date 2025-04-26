@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/26 11:05:23 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/26 17:32:51 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ static	char *newstr(const char *s, char c)
 		len++;
 	str = malloc ((len + 1) * sizeof(char));
     if (str == NULL)
-	{
-       return(NULL);
-	}
+	    return(NULL);
 	while (i < len)
 	{
 		str[i] = s[i];

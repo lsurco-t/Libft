@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/26 18:01:17 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/26 18:58:44 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ static void	cleanstr(char **str, size_t i)
 	}
 	free(str);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**strout;

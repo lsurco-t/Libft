@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:18:21 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/26 10:25:03 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:26:12 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ int    main(void)
     char    **str_output;
 	int	i;
 	
-	str = "  tripouille42";
+	str = "  tripouille  42  ";
     c = ' ';
     str_output = ft_split(str,c);
 	i = 0;

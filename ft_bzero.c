@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -23,29 +22,4 @@ void	ft_bzero(void *s, size_t n)
 		((unsigned char *)s)[i] = '\0';
 		i++;
 	}
-}
-
-int	main(void)
-{
-	char	str1[20] = "Stringtest";
-	char	str2[20] = "Stringtest";
-	size_t	i;
-	size_t	n;
-
-	n = 0;
-	bzero(str1, n);
-	ft_bzero(str2, n);
-	i = 0;
-	while (i < sizeof(str1))
-	{
-		printf("String after original function use: %c\n", str1[i]);
-		i++;
-	}
-	i = 0;
-	while (i < sizeof(str2))
-	{
-		printf("String after recreated function use: %c\n", str2[i]);
-		i++;
-	}
-	return (0);
 }

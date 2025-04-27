@@ -6,12 +6,12 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 10:27:40 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 10:32:50 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 11:25:53 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "../libft.h"
+#include <stdio.h>
 
 #define GREEN "\033[0;32m"
 #define RED "\033[0;31m"
@@ -19,21 +19,11 @@
 
 int	main(void)
 {
-	const char	*tests[] = {
-		"2147483648uu",
-		"  21478uu",
-		"-42",
-		"    +1337abc",
-		"abc123",
-		"",
-		"    ",
-		"0",
-		"-0",
-		NULL
-	};
-	int	i;
-	int	oa;
-	int	fa;
+	const char	*tests[] = {"2147483648uu", "  21478uu", "-42", "    +1337abc",
+					"abc123", "", "    ", "0", "-0", NULL};
+	int			i;
+	int			oa;
+	int			fa;
 
 	i = 0;
 	while (tests[i])

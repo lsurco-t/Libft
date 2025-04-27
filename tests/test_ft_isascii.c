@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 10:18:46 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 10:51:51 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 11:24:52 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,9 @@ void	compare_isascii(int c)
 
 int	main(void)
 {
-	int c = 0;
+	int	c;
 
+	c = 0;
 	while (c <= 255)
 	{
 		compare_isascii(c);

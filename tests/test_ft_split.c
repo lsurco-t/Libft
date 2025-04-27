@@ -25,8 +25,7 @@ void	test_split(const char *str, char c)
 	int		i;
 
 	i = 0;
-	printf(CYAN "Testing split on: \"%s\" with delimiter '%c'\n" RESET, str,
-		c);
+	printf(CYAN "Testing split on: \"%s\" with delimiter '%c'\n" RESET, str, c);
 	printf(YELLOW "Result:\n" RESET);
 	result = ft_split(str, c);
 	if (!result)

@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -26,18 +25,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*int	main(void)
-{
-	char	str1[20] = "Stringfortest";
-	char	str2[20] = "test";
-	char	str3[20] = "Stringfortest";
-	char	str4[20] = "test";
-	size_t	n;
-
-	n = 4;
-	memcpy(str1, str2, n);
-	ft_memcpy(str3, str4, n);
-	printf("String result after using function: %s\n", str1);
-	printf("String result after recreated function used: %s\n", str3);
-	return (0);
-}*/

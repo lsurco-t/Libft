@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -40,16 +39,4 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	}
 	return (dest);
-}
-
-int	main(void)
-{
-	char	str1[20] = "Stringfortest";
-	char	str3[20] = "Stringfortest";
-
-	memmove(str1, str1 + 2, 4);
-	ft_memmove(str3, str3 + 2, 4);
-	printf("String result after using function: %s\n", str1);
-	printf("String result after recreated function used: %s\n", str3);
-	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 19:57:00 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/24 12:00:05 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 16:25:08 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,3 @@ void	ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 }
 
-/*int	main(void)
-{
-	char	c;
-
-	c = 'd';
-	ft_putchar_fd(c, 1);
-	return (0);
-}*/

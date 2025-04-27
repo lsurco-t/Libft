@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -27,16 +25,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-/*int	main(void)
-{
-	char	str1[30] = "firststring";
-	char	str2[30] = "firststring";
-	size_t	n;
-
-	n = 3;
-	memset(str1, 300, n);
-	ft_memset(str2, 300, n);
-	printf("String after original function use: %s\n", str1);
-	printf("String after recreated function use: %s\n", str2);
-	return (0);
-}*/

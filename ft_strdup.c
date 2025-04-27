@@ -6,13 +6,11 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 22:39:34 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/25 10:50:58 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 17:52:03 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -37,29 +35,3 @@ char	*ft_strdup(const char *s)
 	str[i] = '\0';
 	return (str);
 }
-
-/*int	main(void)
-{
-	char	*str1;
-	char	*str2;
-	char	*str3;
-
-	str1 = "Hello, world!";
-	str2 = strdup(str1);
-	str3 = ft_strdup(str1);
-	if (strcmp(str2, str3) == 0)
-	{
-		printf("Same Results!\n");
-		printf("Expected result: %s\n", str2);
-		printf("Function result: %s\n", str3);
-	}
-	else
-	{
-		printf("Different Results!\n");
-		printf("Expected result: %s\n", str2);
-		printf("Function result: %s\n", str3);
-	}
-	free(str2);
-	free(str3);
-	return (0);
-}*/

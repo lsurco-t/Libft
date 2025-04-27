@@ -6,12 +6,11 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:28:59 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 14:07:59 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 22:01:47 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -19,6 +18,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	x;
 
 	i = 0;
+	if (big == NULL || little == NULL)
+		return (NULL);
 	if (!little[i])
 		return ((char *)big);
 	while (big[i] && i < len)
@@ -37,29 +38,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-/*int	main(void)
-{
-	char	str1[] = "abcde";
-	char	str2[] = "cde";
-	size_t	n;
-
-	n = 0;
-	while (n < 20)
-	{
-		if (strnstr(str1, str2, n) == ft_strnstr(str1, str2, n))
-		{
-			printf("Same Results!\n");
-			printf("Expected: %s\n", strnstr(str1, str2, n));
-			printf("Function result: %s\n\n", ft_strnstr(str1, str2, n));
-		}
-		else
-		{
-			printf("Different Results!\n");
-			printf("Expected: %s\n", strnstr(str1, str2, n));
-			printf("Function result: %s\n", ft_strnstr(str1, str2, n));
-			return (0);
-		}
-		n++;
-	}
-	return (0);
-}*/

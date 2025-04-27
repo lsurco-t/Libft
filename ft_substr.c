@@ -6,13 +6,11 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:27:18 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 14:07:28 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 20:48:31 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -40,26 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-/*int	main(void)
-{
-	char			*str;
-	char			*substr;
-	size_t			len;
-	unsigned int	start;
-
-	str = "stringtocopy";
-	start = 0;
-	len = 5;
-	while (start < 20 && len > 0)
-	{
-		substr = ft_substr(str, start, len);
-		printf("Starting point: %i\n", start);
-		printf("length of copy: %zu\n", len);
-		printf("Original string: %s\n", str);
-		printf("Substring is: %s\n\n", substr);
-		free(substr);
-		start++;
-		len--;
-	}
-	return (0);
-}*/

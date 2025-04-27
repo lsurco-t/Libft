@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 20:52:16 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 14:07:41 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 20:45:30 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,25 +41,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (strim);
 }
 
-/*int	main(void)
-{
-	char	*str1;
-	char	*set;
-	char	*str2;
-
-	str1 = "herethereis astree";
-	set = "re";
-	str2 = ft_strtrim(str1, set);
-	printf("\nOriginal String: %s\n", str1);
-	printf("Characters to remove: %s\n", set);
-	printf("Trimmed string: %s\n\n", str2);
-	free(str2);
-	str1 = "removecharactersfromhere";
-	set = "mo";
-	str2 = ft_strtrim(str1, set);
-	printf("Original String: %s\n", str1);
-	printf("Characters to remove: %s\n", set);
-	printf("Trimmed string: %s\n\n", str2);
-	free(str2);
-	return (0);
-}*/

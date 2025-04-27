@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-
 int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0'
@@ -23,12 +20,3 @@ int	ft_isalnum(int c)
 	return (0);
 }
 
-int	main(void)
-{
-	int	c;
-
-	c = 97;
-	printf("Recreated function value: %i\n", ft_isalnum(c));
-	printf("Original function value: %i", isalnum(c));
-	return (0);
-}

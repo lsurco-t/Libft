@@ -6,12 +6,9 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:31:37 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/26 20:17:39 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 10:28:09 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -41,26 +38,3 @@ int	ft_atoi(const char *nptr)
 	return (n * minus);
 }
 
-int	main(void)
-{
-	char	*c;
-	int		oa;
-	int		fa;
-
-	c = "2147483648uu";
-	oa = atoi(c);
-	fa = ft_atoi(c);
-	if (oa == fa)
-	{
-		printf("Same results!\n");
-		printf("Expected: %i\n", atoi(c));
-		printf("Function result: %i\n", ft_atoi(c));
-	}
-	else
-	{
-		printf("Different results!\n");
-		printf("Expected: %i\n", atoi(c));
-		printf("Function result: %i\n", ft_atoi(c));
-	}
-	return (0);
-}

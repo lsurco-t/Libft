@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:51:25 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 19:46:08 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 22:30:21 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[dst_len + i] = '\0';
+	if (dst_len + src_len >= size)
+		return -1;
 	return (src_len + dst_len);
 }
 

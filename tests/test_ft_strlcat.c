@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 18:48:30 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 19:44:58 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 22:38:12 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,20 @@ int main(void)
 	char dst10[10] = "Test";
 	char src10[] = "12345";
 	test_strlcat_cases(dst10, src10, -5);
+
+    char	dst[5];
+	char	*src = "Hello, World!";
+    strcpy(dst, "Hi");
+    size_t dstsize = 5;
+    size_t result = ft_strlcat(dst, src, sizeof(dst));
+	if (result >= dstsize)
+	{
+		printf(GREEN"✅ Correct: Buffer overflow detected. Return value: -1\n" RESET);
+	}
+	else
+	{
+		printf(RED"❌ Incorrect: No overflow detected. Return value: %zu\n" RESET, result);
+	}
 
     return (0);
 }

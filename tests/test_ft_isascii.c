@@ -10,39 +10,38 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libft.h"
 #include <ctype.h>
 #include <stdio.h>
-#include "../libft.h"
 
-void    compare_isascii(int c)
+void	compare_isascii(int c)
 {
-    int original;
-    int custom;
+	int	original;
+	int	custom;
 
-    original = isascii(c);
-    custom = ft_isascii(c);
-
-    if ((original != 0 && custom == 1) || (original == 0 && custom == 0))
-    {
-        printf("\n✅ Match for '%c' (ASCII %d)\n", c, c);
+	original = isascii(c);
+	custom = ft_isascii(c);
+	if ((original != 0 && custom == 1) || (original == 0 && custom == 0))
+	{
+		printf("\n✅ Match for '%c' (ASCII %d)\n", c, c);
 		printf("   isascii: %d | ft_isascii: %d\n\n", original, custom);
-    }
-    else
-    {
-        printf("❌ Mismatch for '%c' (ASCII %d)\n", c, c);
-        printf("   isascii: %d | ft_isascii: %d\n\n", original, custom);
-    }
-    printf("-------------------------------\n");
+	}
+	else
+	{
+		printf("❌ Mismatch for '%c' (ASCII %d)\n", c, c);
+		printf("   isascii: %d | ft_isascii: %d\n\n", original, custom);
+	}
+	printf("-------------------------------\n");
 }
 
-int main(void)
+int	main(void)
 {
-    int c = 0;
+	int c = 0;
 
-    while (c <= 255)
-    {
-        compare_isascii(c);
-        c++;
-    }
-    return (0);
+	while (c <= 255)
+	{
+		compare_isascii(c);
+		c++;
+	}
+	return (0);
 }

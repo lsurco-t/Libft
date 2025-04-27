@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 16:24:59 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 17:03:27 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 17:05:30 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
 #define GREEN   "\033[32m"
-#define YELLOW  "\033[33m"
 #define BLUE    "\033[34m"
 #define FAILURE "❌"
 #define SUCCESS "✅"

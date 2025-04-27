@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 12:16:23 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/24 14:16:58 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 17:12:53 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,3 @@ void	ft_putnbr_fd(int n, int fd)
 	write(fd, &c, 1);
 }
 
-int	main(void)
-{
-	int	nb;
-	int	fd;
-	int	maxnb;
-
-	fd = 1;
-	nb = 5698256;
-	maxnb = 5698300;
-	while (nb <= maxnb)
-	{
-		ft_putnbr_fd(nb, fd);
-		write(fd, "\n", 1);
-		nb++;
-	}
-	return (0);
-}

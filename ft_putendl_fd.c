@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 12:14:43 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/24 12:25:56 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 17:33:16 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_putendl_fd(char *s, int fd)
 
 	i = 0;
 	dn = fd;
+	if(!s)
+		return;
 	while (s[i])
 	{
 		write(dn, &s[i], 1);
@@ -27,13 +29,3 @@ void	ft_putendl_fd(char *s, int fd)
 	write(dn, "\n", 1);
 }
 
-int	main(void)
-{
-	char	*s;
-	int		fd;
-
-	fd = 1;
-	s = "there is a string here";
-	ft_putendl_fd(s, fd);
-	return (0);
-}

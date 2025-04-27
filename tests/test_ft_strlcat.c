@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 18:48:30 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 22:38:12 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 22:48:15 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,11 @@ int main(void)
     size_t result = ft_strlcat(dst, src, sizeof(dst));
 	if (result >= dstsize)
 	{
-		printf(GREEN"✅ Correct: Buffer overflow detected. Return value: -1\n" RESET);
+		printf(GREEN"✅ Correct: Buffer overflow detected.\n" RESET);
 	}
 	else
 	{
-		printf(RED"❌ Incorrect: No overflow detected. Return value: %zu\n" RESET, result);
+		printf(RED"❌ Incorrect: No overflow detected.\n" RESET);
 	}
 
     return (0);

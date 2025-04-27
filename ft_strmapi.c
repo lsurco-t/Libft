@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 22:32:23 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 14:09:28 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 20:03:09 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,32 +34,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-/*static char	test_function(unsigned int i, char c)
-{
-	(void)i;
-	return (ft_toupper(c));
-}
-
-static char	test_function2(unsigned int i, char c)
-{
-	(void)i;
-	if (ft_isalpha(c))
-		return ('1');
-	else
-		return ('0');
-}
-
-int	main(void)
-{
-	char	*str1;
-	char	*str2;
-
-	str1 = "this is the string";
-	str2 = ft_strmapi(str1, test_function);
-	printf("Result of function: %s\n", str2);
-	free(str2);
-	str2 = ft_strmapi(str1, test_function2);
-	printf("Result of function: %s\n", str2);
-	free(str2);
-	return (0);
-}*/

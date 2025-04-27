@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -24,13 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-
-/*int	main(void)
-{
-	const char	*str;
-
-	str = "thereis18wordshere";
-	printf("Recreated function value is: %zu\n", ft_strlen(str));
-	printf("Original function value is: %zu\n", strlen(str));
-	return (0);
-}*/

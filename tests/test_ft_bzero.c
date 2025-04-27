@@ -6,12 +6,13 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 11:11:22 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 11:37:59 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 20:10:38 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <stdio.h>
+#include <string.h>
 
 
 #define RESET   "\033[0m"

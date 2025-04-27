@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:19:59 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/23 22:05:23 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 13:34:06 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,23 +58,3 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int	main(void)
-{
-	int		n;
-	char	*strn;
-
-	n = 214743613;
-	while (n <= 214743646)
-	{
-		strn = ft_itoa(n);
-		if (strn == NULL)
-		{
-			printf("Invalid number!\n");
-			return (1);
-		}
-		printf("Valid number %s\n\n", strn);
-		n++;
-		free(strn);
-	}
-	return (0);
-}

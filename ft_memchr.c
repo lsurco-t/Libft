@@ -6,12 +6,11 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 21:09:04 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/25 08:16:14 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 13:47:07 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -33,30 +32,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-int	main(void)
-{
-	char	str[] = "findhereacharz";
-	int		c;
-	size_t	len;
-
-	c = 'a';
-	len = strlen(str);
-	while (c <= 'z')
-	{
-		if (memchr(str, c, len) == ft_memchr(str, c, len))
-		{
-			printf("Same results!\n");
-			printf("Expected: %s\n", (char *)memchr(str, c, len));
-			printf("Delivered: %s\n\n", (char *)ft_memchr(str, c, len));
-		}
-		else
-		{
-			printf("Different results!\n");
-			printf("Expected: %s\n", (char *)memchr(str, c, len));
-			printf("Delivered: %s\n", (char *)ft_memchr(str, c, len));
-			return (0);
-		}
-		c++;
-	}
-	return (0);
-}

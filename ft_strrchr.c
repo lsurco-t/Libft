@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 11:16:27 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/20 16:11:44 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 14:07:50 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str[20] = "finhdhereachar";
 	char	c;
@@ -49,4 +49,4 @@ int	main(void)
 		return (0);
 	}
 	return (0);
-}
+}*/

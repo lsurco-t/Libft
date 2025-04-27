@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:27:18 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/25 10:55:09 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 14:07:28 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char			*str;
 	char			*substr;
@@ -62,4 +62,4 @@ int	main(void)
 		len--;
 	}
 	return (0);
-}
+}*/

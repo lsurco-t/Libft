@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:28:59 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/21 17:35:20 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 14:07:59 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str1[] = "abcde";
 	char	str2[] = "cde";
@@ -62,4 +62,4 @@ int	main(void)
 		n++;
 	}
 	return (0);
-}
+}*/

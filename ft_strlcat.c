@@ -6,14 +6,13 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:51:25 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/20 10:07:43 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 19:46:08 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
-#include <stdio.h>
+#include "libft.h"
 
-static size_t	ft_strlen(const char *str)
+static size_t	len(const char *str)
 {
 	size_t	i;
 
@@ -31,8 +30,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dst_len;
 	size_t	src_len;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
+	dst_len = len(dst);
+	src_len = len(src);
 	i = 0;
 	if (size <= dst_len)
 		return (size + src_len);
@@ -45,21 +44,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (src_len + dst_len);
 }
 
-int	main(void)
-{
-	char	src[] = "test string";
-	char	dst[20] = "here goes a ";
-	char	dst2[20] = "here goes a ";
-
-	ft_strlcat(dst, src, 10);
-	strlcat(dst2, src, 10);
-	if (strcmp(dst, dst2) == 0)
-		printf("Both functions copied: \"%s\" successfully\n", dst2);
-	else
-	{
-		printf("Different values!\n");
-		printf("Recreated string: %s\n", dst);
-		printf("Original function: %s\n", dst2);
-	}
-	return (0);
-}

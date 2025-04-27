@@ -6,14 +6,13 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 10:22:51 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/20 15:24:28 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/27 19:44:01 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
-#include <stdio.h>
+#include "libft.h"
 
-static size_t	ft_strlen(const char *str)
+static size_t	ft_len(const char *str)
 {
 	size_t	i;
 
@@ -30,7 +29,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	len;
 
-	len = ft_strlen(src);
+	len = ft_len(src);
 	i = 0;
 	if (size == 0)
 		return (len);
@@ -43,17 +42,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (len);
 }
 
-int	main(void)
-{
-	char	src[] = "Stringtocopystring";
-	char	dst[20];
-	char	dst2[20];
-
-	ft_strlcpy(dst, src, sizeof(dst));
-	strlcpy(dst2, src, sizeof(dst2));
-	if (strcmp(dst, dst2) == 0)
-		printf("Both functions copied: %s successfully\n", dst);
-	else
-		printf("Different values\n");
-	return (0);
-}

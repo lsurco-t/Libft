@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 11:16:27 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/28 10:43:36 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/28 13:26:15 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strrchr(const char *s, int c)
 	int	len;
 
 	len = 0;
-	if (!s)
-		return (NULL);
 	while (s[len])
 		len++;
 	while (len >= 0)

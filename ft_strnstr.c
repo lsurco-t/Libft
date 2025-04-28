@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:28:59 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/28 10:43:38 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/28 13:25:22 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	x;
 
 	i = 0;
-	if (big == NULL || little == NULL)
-		return (NULL);
 	if (!little[i])
 		return ((char *)big);
 	while (big[i] && i < len)

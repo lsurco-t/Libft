@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:51:25 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 22:43:17 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:43:53 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + i] = '\0';
 	return (src_len + dst_len);
 }
-

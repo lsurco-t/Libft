@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:31:37 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 10:28:09 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:45:23 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (n * minus);
 }
-

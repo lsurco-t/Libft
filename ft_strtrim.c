@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 20:52:16 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 20:45:30 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:43:33 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	strim[i] = '\0';
 	return (strim);
 }
-

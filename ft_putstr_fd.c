@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 10:26:44 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 17:33:05 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:47:14 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,10 @@ void	ft_putstr_fd(char *s, int fd)
 	i = 0;
 	dn = fd;
 	if (!s)
-		return;
+		return ;
 	while (s[i])
 	{
 		write(dn, &s[i], 1);
 		i++;
 	}
 }
-

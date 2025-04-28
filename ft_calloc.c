@@ -6,7 +6,7 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 19:53:43 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/27 13:29:59 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:45:16 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_memset(str, 0, memsize);
 	return (str);
 }
-

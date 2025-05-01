@@ -2,7 +2,7 @@
 ## Project Overview
 **Libft** is a personal library that provides implementations of essential C standard library functions and other useful utility functions. 
 This project aims to develop a deep understanding of C, memory management, and low-level system operations. It is part of the curriculum at Hive Helsinki.
-##Features
+## Features
 This project includes implementations of several commonly used functions in C. The library provides functionalities such as string manipulation, memory operations, and file handling, designed to mimic standard library functions.
 
 The following functions are implemented:
@@ -15,3 +15,16 @@ The following functions are implemented:
 For a full list, check the **src_1** and **src_2** directories.
 
 ## How to Use
+Compile the library: Run the following command to build the libft.a static library: **make**
+
+To remove the object files generated during compilation, run: **make clean**
+
+To remove both object files and the compiled library (libft.a), use: **make fclean**
+
+To clean, recompile the library, and build it again: **make re**
+
+After compiling the library, you can run the tests to validate your implementations: **make tests**
+
+## Authors:
+- lsurco-t
+- Hive Helsinki

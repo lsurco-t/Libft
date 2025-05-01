@@ -31,12 +31,20 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
+test: all
+	$(MAKE) -C tests
+
 clean:
 	$(RM) $(OBJ)
+	$(MAKE) -C tests clean
 
 fclean: clean
 	$(RM) $(NAME)
+	$(MAKE) -C tests fclean
 
+re tests: fclean all
+	$(MAKE) -C tests
+	
 re: fclean all
 
 .PHONY: all clean fclean re

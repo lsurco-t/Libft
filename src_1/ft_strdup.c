@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/20 11:16:27 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/28 13:26:15 by lsurco-t         ###   ########.fr       */
+/*   Created: 2025/04/21 22:39:34 by lsurco-t          #+#    #+#             */
+/*   Updated: 2025/05/01 21:11:30 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strdup(const char *s)
 {
-	int	len;
+	char	*str;
+	size_t	i;
+	size_t	len;
 
 	len = 0;
+	i = 0;
 	while (s[len])
 		len++;
-	while (len >= 0)
+	str = (char *)malloc((len + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	while (s[i])
 	{
-		if (s[len] == (char)c)
-			return ((char *)(s + len));
-		len--;
+		str[i] = s[i];
+		i++;
 	}
-	return (NULL);
+	str[i] = '\0';
+	return (str);
 }

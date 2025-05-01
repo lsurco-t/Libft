@@ -6,11 +6,11 @@
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:51:25 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/28 10:43:53 by lsurco-t         ###   ########.fr       */
+/*   Updated: 2025/05/01 21:11:34 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static size_t	len(const char *str)
 {

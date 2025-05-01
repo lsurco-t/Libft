@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/21 19:53:43 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/28 10:45:16 by lsurco-t         ###   ########.fr       */
+/*   Created: 2025/04/22 12:27:18 by lsurco-t          #+#    #+#             */
+/*   Updated: 2025/05/01 21:12:35 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	void	*str;
-	size_t	memsize;
+	char	*substr;
+	size_t	i;
+	size_t	cpylen;
 
-	if (nmemb == 0 || size == 0)
+	i = 0;
+	if (s == NULL)
+		return (NULL);
+	cpylen = ft_strlen(s);
+	if (start >= cpylen || len == 0)
+		return (ft_strdup(""));
+	if (start + len > cpylen)
+		len = cpylen - start;
+	substr = malloc((len + 1) * sizeof(char));
+	if (substr == NULL)
+		return (NULL);
+	while (i < len)
 	{
-		str = malloc(0);
-		return (str);
+		substr[i] = s[i + start];
+		i++;
 	}
-	if (nmemb > SIZE_MAX / size)
-		return (NULL);
-	memsize = nmemb * size;
-	str = malloc(memsize);
-	if (str == NULL)
-		return (NULL);
-	ft_memset(str, 0, memsize);
-	return (str);
+	substr[i] = '\0';
+	return (substr);
 }

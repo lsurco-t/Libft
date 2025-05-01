@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/21 11:22:07 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/28 10:44:53 by lsurco-t         ###   ########.fr       */
+/*   Created: 2025/04/21 19:53:43 by lsurco-t          #+#    #+#             */
+/*   Updated: 2025/05/01 21:11:00 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t			i;
-	unsigned char	*ch1;
-	unsigned char	*ch2;
+	void	*str;
+	size_t	memsize;
 
-	if (n == 0)
-		return (0);
-	i = 0;
-	ch1 = (unsigned char *)s1;
-	ch2 = (unsigned char *)s2;
-	while (i < n)
+	if (nmemb == 0 || size == 0)
 	{
-		if (ch1[i] != ch2[i])
-		{
-			return (ch1[i] - ch2[i]);
-		}
-		i++;
+		str = malloc(0);
+		return (str);
 	}
-	return (0);
+	if (nmemb > SIZE_MAX / size)
+		return (NULL);
+	memsize = nmemb * size;
+	str = malloc(memsize);
+	if (str == NULL)
+		return (NULL);
+	ft_memset(str, 0, memsize);
+	return (str);
 }

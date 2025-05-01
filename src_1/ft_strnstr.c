@@ -1,43 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/18 10:22:51 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/28 10:45:49 by lsurco-t         ###   ########.fr       */
+/*   Created: 2025/04/21 13:28:59 by lsurco-t          #+#    #+#             */
+/*   Updated: 2025/05/01 21:11:52 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-static size_t	ft_len(const char *str)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
+	size_t	x;
 
 	i = 0;
-	while (str[i])
+	if (!little[i])
+		return ((char *)big);
+	while (big[i] && i < len)
 	{
+		x = 0;
+		while (big[i + x] == little[x] && (i + x) < len)
+		{
+			if (little[x + 1] == '\0')
+			{
+				return ((char *)&big[i]);
+			}
+			x++;
+		}
 		i++;
 	}
-	return (i);
-}
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-	size_t	len;
-
-	len = ft_len(src);
-	i = 0;
-	if (size == 0)
-		return (len);
-	while (src[i] && i < size - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (len);
+	return (NULL);
 }

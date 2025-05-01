@@ -1,42 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsurco-t <lsurco-t@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 14:15:34 by lsurco-t          #+#    #+#             */
-/*   Updated: 2025/04/17 14:56:49 by lsurco-t         ###   ########.fr       */
+/*   Created: 2025/04/16 21:36:56 by lsurco-t          #+#    #+#             */
+/*   Updated: 2025/04/17 12:47:27 by lsurco-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
 
-	if (dest == src || n == 0)
+	i = 0;
+	while (i < n)
 	{
-		return (dest);
+		((unsigned char *)s)[i] = (unsigned char)c;
+		i++;
 	}
-	if (dest < src)
-	{
-		i = 0;
-		while (i < n)
-		{
-			((char *)dest)[i] = ((const char *)src)[i];
-			i++;
-		}
-	}
-	else
-	{
-		i = n;
-		while (i > 0)
-		{
-			i--;
-			((char *)dest)[i] = ((const char *)src)[i];
-		}
-	}
-	return (dest);
+	return (s);
 }

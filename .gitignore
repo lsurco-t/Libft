@@ -12,5 +12,4 @@ libft.a
 *.exe 
 
 # Folders
-main/
 .vscode/

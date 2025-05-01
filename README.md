@@ -15,6 +15,9 @@ The following functions are implemented:
 For a full list, check the **src_1** and **src_2** directories.
 
 ## How to Use
+
+Compile the library, and run the different tests: **make run_tests**
+
 Compile the library: Run the following command to build the libft.a static library: **make**
 
 To remove the object files generated during compilation, run: **make clean**
@@ -22,8 +25,6 @@ To remove the object files generated during compilation, run: **make clean**
 To remove both object files and the compiled library (libft.a), use: **make fclean**
 
 To clean, recompile the library, and build it again: **make re**
-
-After compiling the library, you can run the tests to validate your implementations: **make tests**
 
 ## Authors:
 **lsurco-t**

@@ -15,6 +15,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
+LDFLAGS = -lbsd
 
 SRC = \
 	src_1/ft_isalpha.c src_1/ft_isdigit.c src_1/ft_isalnum.c src_1/ft_isascii.c src_1/ft_isprint.c \
@@ -26,10 +27,25 @@ SRC = \
 
 OBJ = $(SRC:.c=.o)
 
+TEST_SRC := $(wildcard tests/test_*.c)
+TEST_BIN := $(patsubst tests/%.c, tests/%, $(TEST_SRC))
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
+
+tests: $(NAME) $(TEST_BIN)
+
+$(TEST_BIN): tests/%: tests/%.c
+	$(CC) $(CFLAGS) -I. $< $(NAME) -o $@ $(LDFLAGS)
+
+run_tests: tests
+	@for bin in $(TEST_BIN); do \
+		echo "Running $$bin..."; \
+		./$$bin || exit 1; \
+		sleep 15; \
+	done
 
 test: all
 	$(MAKE) -C tests

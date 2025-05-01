@@ -26,5 +26,5 @@ To clean, recompile the library, and build it again: **make re**
 After compiling the library, you can run the tests to validate your implementations: **make tests**
 
 ## Authors:
-- lsurco-t
+**lsurco-t**
 - Hive Helsinki

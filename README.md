@@ -1,4 +1,4 @@
-# Libft - Hive Helsinki
+# Libft
 ## Project Overview
 **Libft** is a personal library that provides implementations of essential C standard library functions and other useful utility functions. 
 This project aims to develop a deep understanding of C, memory management, and low-level system operations. It is part of the curriculum at Hive Helsinki.
@@ -27,5 +27,6 @@ To remove both object files and the compiled library (libft.a), use: **make fcle
 To clean, recompile the library, and build it again: **make re**
 
 ## Authors:
+
 **lsurco-t**
-- Hive Helsinki
+
